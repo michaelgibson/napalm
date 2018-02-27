@@ -1600,6 +1600,10 @@ class IOSDriver(NetworkDriver):
         cpu_cmd = 'show proc cpu'
         mem_cmd = 'show memory statistics'
         temp_cmd = 'show env temperature status'
+        io_total_mem = 0
+        io_used_mem = 0
+        proc_total_mem = 0
+        proc_used_mem = 0
 
         output = self._send_command(cpu_cmd)
         environment.setdefault('cpu', {})
